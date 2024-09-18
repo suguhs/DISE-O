@@ -4,7 +4,54 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejemplo de Página Web</title>
-        <link rel="stylesheet" href="/Practica_Final_I/Css/styles.css">
+        <style>
+            body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cabe {
+    text-align: center; /* Centra el texto del header */
+    background-color: #0d4bd1; /* Fondo verde */
+    padding: 20px; /* Espaciado */
+    color: white;
+     /*Define el radio de cada borde para que quede redondo*/
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+}
+
+.menu {
+    display: flex; /* Usar flexbox para el menú */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 10px 0; /* Espaciado superior e inferior */
+}
+
+.menu ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margin */
+}
+
+.menu li {
+    margin-right: 20px; /* Espaciado entre ítems del menú */
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+}
+
+.menu a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+.pie{
+   text-align: center;
+   height: auto;
+   margin-top: 50px;
+}
+
+        </style>
     </head>
     <body>
         <div class="cabe">
@@ -12,16 +59,21 @@
                 <h1>Tecno News</h1>
                 <nav class="menu">
                     <ul>
-                        <li><a href="index.html"></a></li>
-                        <li><a href="Practica_Final_I\Portfolio\nintendo.html"></a></li>
-                        <li><a href="Practica_Final_I\Portfolio\xbox.html"></a></li>
-                        <li><a href="Practica_Final_I\Portfolio\sony.html"></a></li>
-                        <li><a href="Practica_Final_I\Portfolio\registrate.html"></a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Practica_Final_I\Portfolio\nintendo.html">Nintendo</a></li>
+                        <li><a href="Practica_Final_I\Portfolio\xbox.html">Xbox</a></li>
+                        <li><a href="Practica_Final_I\Portfolio\sony.html">Sony</a></li>
+                        <li><a href="Practica_Final_I\Portfolio\registrate.html">Registrate</a></li>
                     </ul>
 
                 </nav>
             </header>
         </div>
+
+        <footer class="pie">
+            <img src="Practica_Final_I/Imagenes_Videos/mando.png"> </img>
+
+        </footer>
     </body>
 
 </html>
