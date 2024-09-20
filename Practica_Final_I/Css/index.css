@@ -1,10 +1,4 @@
-<html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejemplo de Página Web</title>
-        <style>
             body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -81,34 +75,4 @@
   text-decoration: none;
 }
 
-        </style>
-    </head>
-    <body>
-        <div class="cabe">
-            <header>
-                <h1>Tecno News</h1>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="Practica_Final_I/Portfolio/inicio.html">Inicio</a></li>
-                        <li><a href="Practica_Final_I\Portfolio\nintendo.html">Nintendo</a></li>
-                        <li><a href="Practica_Final_I\Portfolio\xbox.html">Xbox</a></li>
-                        <li><a href="Practica_Final_I\Portfolio\sony.html">Sony</a></li>
-                        <li><a href="Practica_Final_I\Portfolio\registrate.html">Registrate</a></li>
-                    </ul>
 
-                </nav>
-            </header>
-        </div>
-        <footer class="pie">
-            <h1>Redes Sociales</h1>
-            <div class="social">
-                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/facebook.jpg" alt="facebook"></a>
-                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/youtube(4).jfif" alt="youtube"></a>
-                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/linkedin.webp" alt="linkedin"></a>
-                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/instagram.jfif" alt="instagram"></a>
-            </div>
-
-        </footer>
-    </body>
-
-</html>
