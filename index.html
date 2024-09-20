@@ -8,16 +8,22 @@
             body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: rgb(34, 33, 32);
 }
 
 .cabe {
     text-align: center; /* Centra el texto del header */
     background-color: #0d4bd1; /* Fondo verde */
-    padding: 20px; /* Espaciado */
+    padding:10px; /* Espaciado */
     color: white;
      /*Define el radio de cada borde para que quede redondo*/
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 30px;
+    height:110px;
+    width: auto;
+}
+.cabe h1{
+    margin-top: 1px;
 }
 
 .menu {
@@ -45,10 +51,34 @@
 .menu a:hover {
     text-decoration: underline; /* Subrayar al pasar el ratón */
 }
-.pie{
-   text-align: center;
-   height: auto;
-   margin-top: 50px;
+.pie {
+  background-color: #0057d8;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: auto; /*Elimina la altura fija*/
+  bottom: 0;
+  display: flex;
+  justify-content: center; /*Sirve para hacer que los textos de un div vayan al centro*/
+  align-items: center;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 30px;
+}
+.pie h1 {
+  font-size: 18px; /* Ajusta el tamaño del texto */
+  color: white; /* Color del texto */
+  margin-right: 20px; /* Espaciado a la derecha del texto */
+}
+
+.social img {
+  width: 40px; /* Ajusta el tamaño de las imágenes aquí */
+  height: auto;
+  margin: 0 10px;
+}
+
+.social a {
+  text-decoration: none;
 }
 
         </style>
@@ -59,7 +89,7 @@
                 <h1>Tecno News</h1>
                 <nav class="menu">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="Practica_Final_I/Portfolio/inicio.html">Inicio</a></li>
                         <li><a href="Practica_Final_I\Portfolio\nintendo.html">Nintendo</a></li>
                         <li><a href="Practica_Final_I\Portfolio\xbox.html">Xbox</a></li>
                         <li><a href="Practica_Final_I\Portfolio\sony.html">Sony</a></li>
@@ -69,9 +99,14 @@
                 </nav>
             </header>
         </div>
-
         <footer class="pie">
-            <img src="Practica_Final_I/Imagenes_Videos/mando.png"> </img>
+            <h1>Redes Sociales</h1>
+            <div class="social">
+                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/facebook.jpg" alt="facebook"></a>
+                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/youtube(4).jfif" alt="youtube"></a>
+                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/linkedin.webp" alt="linkedin"></a>
+                <a href="#"><img src="Practica_Final_I/Imagenes_Videos/instagram.jfif" alt="instagram"></a>
+            </div>
 
         </footer>
     </body>
