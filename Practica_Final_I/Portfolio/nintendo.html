@@ -3,6 +3,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/index.css">
+
+    <style>
+        .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #0d4bd1;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-top: 90px ;
+    border-radius: 30px;
+}
+
+.info-text {
+    width: 50%;
+    padding-right: 20px;
+    color: white;
+}
+
+.info-text h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.image {
+    width: 50%;
+    text-align: right;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -21,7 +68,24 @@
             </nav>
         </header>
     </div>
-    <img class="icon" src="../Imagenes_Videos/mando.png">
+    <div class="container">
+        <div class="info-text">
+            <h1><strong>Información de  Nintendo</strong></h1>
+            <p>
+                Nintendo es una empresa japonesa fundada en 1889, que 
+                inicialmente fabricaba cartas de juego. En los años 80, 
+                se transformó en líder de la industria de videojuegos con
+                 la creación de consolas como la NES y franquicias icónicas
+                  como Mario, Zelda y Pokémon. Con innovaciones como el Game Boy,
+                   Wii, y Switch, Nintendo sigue siendo un referente en 
+                   entretenimiento interactivo, reconocido por su creatividad
+                    y enfoque en la diversión familiar.
+            </p>
+        </div>
+        <div class="image">
+            <img src="../Imagenes_Videos/nintendo_logo.png" alt="Descripción de la imagen">
+        </div>
+    </div>
     <footer class="pie">
         <h1>Redes Sociales</h1>
         <div class="social">
