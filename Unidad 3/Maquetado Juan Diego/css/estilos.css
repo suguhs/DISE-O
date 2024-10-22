@@ -73,10 +73,11 @@ aside {
   color: rgb(243, 55, 132);
   padding: 10px;
   position: absolute;
-  right: 15%;
+  right: 55%;
   text-align: center;
   top: 30%;
   width: 20%;
+  float: left; width: 200px;
 }
 
 aside a {
@@ -121,7 +122,9 @@ main:after {
   float: left;
   padding: 20px;
   text-align: center;
-  width: 33%;
+  width: 40%;
+  
+  margin-left: 50px;
 }
 
 .cards .card img {
@@ -139,6 +142,11 @@ main:after {
 .bottle img {
   float: left;
   margin-left: 10%;
+  width: 20%;
+}
+.bottle3 img {
+  float: right;
+  margin-right: 10%;
   width: 20%;
 }
 
