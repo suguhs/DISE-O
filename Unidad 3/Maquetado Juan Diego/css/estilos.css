@@ -73,7 +73,7 @@ aside {
   color: rgb(243, 55, 132);
   padding: 10px;
   position: absolute;
-  right: 55%;
+  right: 75%;
   text-align: center;
   top: 30%;
   width: 20%;
@@ -109,7 +109,7 @@ main:after {
   display: block;
   content: " ";
   height: 2px;
-  width: 30%;
+  width: 85%;
   margin: 0px auto;
   margin-top: 30px;
 }
@@ -128,34 +128,28 @@ main:after {
 }
 
 .cards .card img {
-  width: 50%;
+  width: 80%;
 }
 
 
-/* Sección con la botella y los tres párrafos descriptivos */
-.bottle {
-  margin: 30px auto;
-  overflow-y: auto;
-  width: 70%;
+section.bottle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
 }
 
-.bottle img {
-  float: left;
-  margin-left: 10%;
-  width: 20%;
-}
-.bottle3 img {
-  float: right;
-  margin-right: 10%;
-  width: 20%;
+section.bottle img {
+  width: 150px; /* Ajusta el tamaño de las imágenes */
+  height: auto;
 }
 
-.bottle div {
-  float: left;
-  margin-top: 20px;
-  text-align: justify;
-  width: 50%;
+section.bottle div {
+  max-width: 600px;
+  padding: 0 20px;
+  text-align: center;
 }
+
 
 /* Mostrarmos la primera letra con un borde diferente */
 .bottle div::first-letter {
@@ -175,6 +169,7 @@ main:after {
   margin: 20px auto;
   overflow-y: auto;
   width: 70%;
+  margin-left: 250px;
 }
 .gallery img {
   float: left;
@@ -184,33 +179,84 @@ main:after {
 
 /* Estilos para el pie de página */
 footer {
-  background-color: #121867;
-  clear: both;
-  color: rgb(243, 55, 132);
-  font-weight: bolder;
-  font-size: 0.8;
-  margin-top: 20px;
-  overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  background-color: #121867;
 }
 
 footer address {
-  float: left;
-  width: 20%;
+  font-style: normal;
+  color: rgb(243, 55, 132);;
 }
 
-footer div {
-  float: left;
+footer .social {
+  text-align: right;
+  color: rgb(243, 55, 132);;
+}
+
+footer .social img {
+  margin-left: 10px;
+  width: 70px; /* Ajusta el tamaño de las imágenes según lo necesario */
+  height: auto;
+}
+
+
+
+.sidebar {
+  background-color: #121867; 
+  padding: 20px;
   text-align: center;
-  width: 60%;
+  position: fixed;
+  
+  margin-top: 200px;
+  margin-bottom: 100  0px;
+margin-left: 10px;
+  width: 120px;
+  border-radius: 10px;
+   
 }
 
-footer section {
-  float: left;
-  text-align: center;
-  width: 20%;
+
+.profile-picture img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  
+
 }
 
-footer img {
-  width: 12%;
+.welcome-text p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(243, 55, 132);
+}
+
+.welcome-text ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.welcome-text li {
+  margin: 10px 0;
+}
+
+.welcome-text a {
+  text-decoration: none;
+  color: rgb(243, 55, 132);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.welcome-text a:hover {
+  color: #007bff;
+}
+.welcome-text nav{
+  background-color: none;
+  
 }
