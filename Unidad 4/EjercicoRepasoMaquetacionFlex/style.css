@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos del encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50; /* Color oscuro */
+    padding: 20px;
+    color: white;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.header h1 {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.menu {
+    margin-left: auto;
+    background-color:#c0392b;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 15px 20px;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #c0392b; 
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    background-color: #e74c3c;
+}
+
+
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.content {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f39c12;
+    padding: 20px;
+}
+
+.sidebar .box {
+    background-color: blue;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    margin-right: auto; /* Alinea el texto a la izquierda */
+    margin-left: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px; /* Espacio entre los iconos */
+}
+
+.footer img.social-icon {
+    width: 40px; /* Ajusta el ancho de las imágenes */
+    height: 40px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga la proporción */
+    border-radius: 4px; /* Opcional: agrega bordes redondeados */
+}
