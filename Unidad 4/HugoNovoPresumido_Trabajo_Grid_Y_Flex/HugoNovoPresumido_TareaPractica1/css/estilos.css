@@ -1,7 +1,11 @@
+/* BOX-SIZING para calcular directamente todas las dimensiones de las cajas */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 
+/* RESETEO LIMITADO DE PROPIEDADES */
 body,
 h1,
 h2,
@@ -11,41 +15,36 @@ h5,
 h6,
 p {
   margin: 0px;
+    
 }
 
+/* Estilo para las fuentes en toda la página */
 body {
   color: #121867;
   font-family: "Lato", sans-serif;
   font-weight: bolder;
 }
 
-nav, .container, footer {
+/* Establecemos el centrado y las dimensiones de los elementos principales */
+nav,.container,footer {
   max-width: 1200px;
   min-width: 576px;
-  margin: 0px auto;
+  margin:0px auto;
 }
 
+
+
+/* Estilos para el menú principal */
 nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #121867;
   color: rgb(243, 55, 132);
-  font-size: 1.4rem;
+  font-size: 1.4;
   padding: 10px;
+  position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  overflow-y: auto;
+  top: 0px;
   z-index: 100;
-}
-
-nav .nav-item {
-  padding: 5px 15px;
-  cursor: pointer;
-}
-
-nav .nav-item:hover {
-  color: white;
-  text-decoration: underline;
 }
 
 nav div {
@@ -54,16 +53,20 @@ nav div {
   padding: 5px;
 }
 
+/* Estilos para la cabecera */
 header {
   position: relative;
   text-align: center;
 }
 
+/* Fondo de la cabecera */
 header img {
   opacity: 0.7;
   width: 100%;
 }
 
+
+/* Call for action para Comprar */
 aside {
   background-color: #121867;
   border-radius: 20px;
@@ -74,8 +77,7 @@ aside {
   text-align: center;
   top: 30%;
   width: 20%;
-  float: left;
-  width: 200px;
+  float: left; width: 200px;
 }
 
 aside a {
@@ -91,19 +93,20 @@ aside h3 {
   margin: 20px 0px;
 }
 
+/* Elemento principal con las 3 cards */
 main {
   margin: 0px auto;
   width: 80%;
 }
-
 main h1 {
   text-align: center;
 }
 
+/* Línea separados de elementos */
 main h1::after,
 main:after {
   background-color: rgb(243, 55, 132);
-  display: flex;
+  display: block;
   content: " ";
   height: 2px;
   width: 85%;
@@ -111,21 +114,23 @@ main:after {
   margin-top: 30px;
 }
 
+/* Estilos para la zona de las cards */
 .cards {
   overflow-y: auto;
 }
-
 .cards .card {
   float: left;
   padding: 20px;
   text-align: center;
   width: 40%;
+  
   margin-left: 50px;
 }
 
 .cards .card img {
   width: 80%;
 }
+
 
 section.bottle {
   display: flex;
@@ -135,7 +140,7 @@ section.bottle {
 }
 
 section.bottle img {
-  width: 150px;
+  width: 150px; /* Ajusta el tamaño de las imágenes */
   height: auto;
 }
 
@@ -145,6 +150,8 @@ section.bottle div {
   text-align: center;
 }
 
+
+/* Mostrarmos la primera letra con un borde diferente */
 .bottle div::first-letter {
   border-right: 1px solid #121867;
   border-bottom: 1px solid #121867;
@@ -155,6 +162,8 @@ section.bottle div {
   padding-right: 10px;
 }
 
+
+/* Estilos para la galería de imágenes */
 .gallery {
   clear: both;
   margin: 20px auto;
@@ -162,55 +171,61 @@ section.bottle div {
   width: 70%;
   margin-left: 250px;
 }
-
 .gallery img {
   float: left;
   width: 20%;
 }
 
+
+/* Estilos para el pie de página */
 footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
   padding: 20px;
   background-color: #121867;
-  color: rgb(243, 55, 132);
 }
 
 footer address {
-  grid-column: 1;
   font-style: normal;
+  color: rgb(243, 55, 132);;
 }
 
 footer .social {
-  grid-column: 2;
-  display: flex;
-  gap: 10px;
+  text-align: right;
+  color: rgb(243, 55, 132);;
 }
 
 footer .social img {
-  width: 50px;
+  margin-left: 10px;
+  width: 70px; /* Ajusta el tamaño de las imágenes según lo necesario */
   height: auto;
 }
 
+
+
 .sidebar {
-  background-color: #121867;
+  background-color: #121867; 
   padding: 20px;
   text-align: center;
   position: fixed;
+  
   margin-top: 200px;
-  margin-bottom: 100px;
-  margin-left: 10px;
+  margin-bottom: 100  0px;
+margin-left: 10px;
   width: 120px;
   border-radius: 10px;
+   
 }
+
 
 .profile-picture img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   margin-bottom: 20px;
+  
+
 }
 
 .welcome-text p {
@@ -224,6 +239,7 @@ footer .social img {
 .welcome-text ul {
   list-style-type: none;
   padding: 0;
+
 }
 
 .welcome-text li {
@@ -240,7 +256,7 @@ footer .social img {
 .welcome-text a:hover {
   color: #007bff;
 }
-
-.welcome-text nav {
+.welcome-text nav{
   background-color: none;
+  
 }
