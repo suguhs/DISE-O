@@ -70,7 +70,7 @@ nav {
 }
 
 /* Estilos principales */
-main {
+section {
     color: #fff;
 }
 
@@ -270,39 +270,56 @@ main {
     }
 }
 
-/* Móvil (máximo 600px) */
-@media screen and (max-width: 600px) {
+/* Móvil (máximo 450px) */
+@media screen and (max-width: 450px) {
     header {
-        padding: 10px;
+        padding: 5px;
         font-size: 1.5rem;
-        width: 100%;
+        width: 120%;
+    }
+    header img{
+        width:150px;
+        margin-left: -15px;
+        margin-right: -50px;
     }
 
     .menu ul {
         gap: 5px;
+        font-size: 3px;
+        margin-left: -10px;
     }
-
-    .info-text {
-        font-size: 18px;
+    .menu li{
+        margin-right: 20px;
+        font-size: 15px;
     }
-
+    .first-hoja{
+        width: 70%;
+    }
+    .first_container{
+        width: 90%;
+        
+    }
+    .first_container img{
+        width: 90%;
+        margin-left: 20px;
+    }
     .photo-grid img {
-        max-width: 250px;
+        max-width: 300px;
         min-width: 100px;
     }
 
     .photo-grid {
        
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        display: flex;
+        flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
     .registro-container {
         width: 95%;
         padding: 20px;
         margin-left: 15px;
     }
-
     .pie h1 {
         font-size: 16px;
     }
