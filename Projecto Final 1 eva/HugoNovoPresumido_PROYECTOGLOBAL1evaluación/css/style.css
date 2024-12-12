@@ -229,7 +229,6 @@ section {
 /* Tablet (máximo 900px) */
 @media screen and (max-width: 900px) {
     header {
-        flex-direction: column;
         align-items: center;
         flex-direction: row;
     }
@@ -257,31 +256,46 @@ section {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
         gap: 20px;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .photo-grid img{
+        width: 70%;
+        
     }
     
 
     .registro-container {
-        width: 70%;
+        width: 65%;
+        align-items: center;
     }
 
     .pie {
         flex-direction: column;
         text-align: center;
     }
+    .container-social{
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 /* Móvil (máximo 450px) */
 @media screen and (max-width: 450px) {
+    .container{
+        margin-left: -10px;
+    }
     header {
         padding: 5px;
         font-size: 1.5rem;
         width: 120%;
     }
     header img{
-        width:150px;
+        width:130px;
         margin-left: -15px;
-        margin-right: -50px;
+        margin-right: -40px;
     }
+
 
     .menu ul {
         gap: 5px;
@@ -289,8 +303,9 @@ section {
         margin-left: -10px;
     }
     .menu li{
-        margin-right: 20px;
-        font-size: 15px;
+        margin-right: 40px;
+        font-size: 13px;
+        padding: 0px;
     }
     .first-hoja{
         width: 70%;
@@ -316,9 +331,12 @@ section {
         align-items: center;
     }
     .registro-container {
-        width: 95%;
+        width: 75%;
         padding: 20px;
-        margin-left: 15px;
+        align-items: center;
+    }
+    .registro-container img{
+        width: 80%;
     }
     .pie h1 {
         font-size: 16px;
