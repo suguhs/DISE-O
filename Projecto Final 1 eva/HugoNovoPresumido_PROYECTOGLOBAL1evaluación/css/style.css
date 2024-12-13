@@ -28,24 +28,28 @@ header {
     padding: 10px 20px;
 }
 
-header img {
-    width: 200px;
-}
-
 nav {
     display: block;
     unicode-bidi: isolate;
     margin-right: 80px;
 }
 
-.logo {
-    max-width: 150px;
-    padding: 0%;
+.logo-container {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
 }
 
-.logo img {
-    margin-right: 10px;
-    border-radius: 4px;
+.logo {
+    width: 100px; 
+    height: auto;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0; 
+    color: #000;
 }
 
 .menu {
@@ -69,7 +73,6 @@ nav {
     font-size: 18px;
 }
 
-/* Estilos principales */
 section {
     color: #fff;
 }
@@ -125,9 +128,9 @@ section {
 .photo-grid {
     width: 100%;
     max-width: 2200px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
     justify-content: center;
     margin-top: 50px;
 }
@@ -142,22 +145,33 @@ section {
     margin-left: 20px;
 }
 
-.registro-container {
-    background-color: #ffffff;
-    padding: 60px;
-    border-radius: 8px;
-    color: #000000;
-    width: 600px;
-    margin: 30px auto;
-    margin-bottom: 100px;
-    margin-top: 130px;
+.registro {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px;
+    background-color: #000527;
+    color: white;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 50px auto; 
 }
 
-.registro-container img {
-    width: 80%;
-    margin-bottom: -30px;
-    margin-top: -60px;
-    margin-left: 10%;
+.texto-registro {
+    flex: 1;
+    font-size: 24px;
+    text-align: center;
+}
+
+.registro-container {
+    flex: 1; 
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .registro-container label {
@@ -192,7 +206,7 @@ section {
 
 .registro-container button:hover {
     background-color: #45a049;
-} 
+}
 
 .pie {
     background-color: #ffffff;
@@ -200,7 +214,6 @@ section {
     text-align: center;
     width: 100%;
     height: auto;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,13 +222,23 @@ section {
 }
 
 .pie h1 {
-    font-size: 18px; 
+    font-size: 18px;
     color: rgb(0, 0, 0);
-    margin-right: 20px; 
+    margin-right: 20px;
+}
+
+.texto-registro {
+    color: white;
+}
+
+.container-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .social img {
-    width: 40px; 
+    width: 40px;
     height: auto;
     margin: 0 10px;
 }
@@ -224,10 +247,11 @@ section {
     text-decoration: none;
 }
 
+
 /* Media Queries */
 
-/* Tablet (máximo 900px) */
-@media screen and (max-width: 900px) {
+/* Tablet (máximo 992px) */
+@media screen and (max-width: 992px) {
     header {
         align-items: center;
         flex-direction: row;
@@ -236,9 +260,9 @@ section {
     .menu ul {
         flex-direction: row;
         gap: 10px;
-        
     }
-    .menu li{
+
+    .menu li {
         margin-right: 0px;
     }
 
@@ -254,95 +278,120 @@ section {
 
     .photo-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
         align-items: center;
         margin-left: 50px;
     }
-    .photo-grid img{
+
+    .photo-grid img {
         width: 70%;
-        
-    }
-    
-
-    .registro-container {
-        width: 65%;
-        align-items: center;
     }
 
-    .pie {
+    .registro {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
-    .container-social{
-        display: flex;
-        flex-direction: row;
+
+    .texto-registro {
+        font-size: 20px; 
+    }
+
+    .registro-container {
+        padding: 15px;
     }
 }
 
-/* Móvil (máximo 450px) */
-@media screen and (max-width: 450px) {
-    .container{
-        margin-left: -10px;
+.pie {
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-social {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Móvil (máximo 576px) */
+@media screen and (max-width: 576px) {
+    .container {
+        margin-left: 0px;
     }
+
     header {
         padding: 5px;
         font-size: 1.5rem;
-        width: 120%;
-    }
-    header img{
-        width:130px;
-        margin-left: -15px;
-        margin-right: -40px;
+        width: 100%;
     }
 
-
-    .menu ul {
+    .logo-container {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
         gap: 5px;
-        font-size: 3px;
-        margin-left: -10px;
     }
-    .menu li{
-        margin-right: 40px;
-        font-size: 13px;
-        padding: 0px;
+
+    .logo-container img {
+        width: 100px;
     }
-    .first-hoja{
+
+    .site-title {
+        font-size: 20px; 
+        
+        max-width: 100%; 
+    }
+
+    .first-hoja {
         width: 70%;
     }
-    .first_container{
-        width: 90%;
-        
+
+    .first_container {
+        width: 100%;
     }
-    .first_container img{
+
+    .first_container img {
         width: 90%;
         margin-left: 20px;
     }
-    .photo-grid img {
-        max-width: 300px;
-        min-width: 100px;
-    }
 
     .photo-grid {
-       
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
-    .registro-container {
-        width: 75%;
-        padding: 20px;
-        align-items: center;
+
+    .photo-grid img {
+        max-width: 400px;
+        min-width: 100px;
     }
-    .registro-container img{
-        width: 80%;
+
+    .registro {
+        padding: 10px;
+        gap: 10px;
+        text-align: center;
     }
+
+    .texto-registro {
+        font-size: 18px; 
+        text-align: center;
+    }
+
+    .registro-container input,
+    .registro-container button {
+        font-size: 14px; 
+    }
+
     .pie h1 {
         font-size: 16px;
     }
 
     .social img {
         width: 30px;
+    }
+    .container-social{
+        display: flex;
+        flex-direction: column;
     }
 }
