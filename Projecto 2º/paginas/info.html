@@ -1,41 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eslands</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Sección con imagen de fondo */
+        .fondo-gala {
+            background-image: url('../imagenes/ESLAND_WALLPAPER_02.jpg'); /* Ruta de la imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh; /* La imagen ocupará el 80% de la pantalla */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Filtro oscuro para mejorar el contraste del texto */
+        .fondo-gala::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen */
+        }
+
+        /* Hace que el contenido esté por encima del filtro */
+        .fondo-gala .contenido {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
-<body>
-    <body class="bg-dark text-white">
-        <div class="container">
-            <header class="d-flex justify-content-between align-items-center bg-light text-dark p-3 sticky-top shadow">
-                <div class="d-flex align-items-center">
-                    <img src="../imagenes/logo_basico.svg" alt="../index.html" width="100" class="me-2" href="../index.html">
-                    <h2 class="m-0">Eslands</h2>
+
+<body class="bg-dark text-white">
+    <div class="container">
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center bg-light text-dark p-3 sticky-top shadow">
+            <div class="d-flex align-items-center">
+                <a href="../index.html">
+                    <img src="../imagenes/logo_basico.svg" alt="Logo" width="100" class="me-2">
+                </a>
+                <h2 class="m-0">Eslands</h2>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="../index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="info.html">INFO</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#">LOCALIZACIÓN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Sección con fondo de imagen y texto encima -->
+        <main class="my-4">
+            <section class="fondo-gala">
+                <div class="contenido">
+                    <h1 class="fw-bold">La Última Gala</h1>
+                    <div class="mt-4 ">
+                    <p class="mx-4 px-3 fw-bold" >
+                        Revive los mejores momentos de la última edición de los Premios ESLAND, 
+                    </p>
+                    <p class="mx-4 px-3 fw-bold" >
+                        donde se premió a los mejores creadores de contenido del mundo hispanohablante.
+                    </p>
+                    </div>
                 </div>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link text-dark fw-bold" href="../index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark fw-bold" href="info.html">INFO</a></li>
+            </section>
 
-                        <li class="nav-item"><a class="nav-link text-dark fw-bold" href="#">LOCALIZACIÓN</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <section>
+                <div class="container">
+                    <h2 class="text-center mt-4">Ganadores de la Última Edición</h2>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="../imagenes/ganador1.jpg" alt="Ganador 1" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="card-title">Mejor Creador de Contenido</h3>
+                                    <p class="card-text">El premio al mejor creador de contenido fue para...</p>
+                                    <a href="#" class="btn btn-primary">Ver más</a>
+                                </div>
+                            </div>
+            </section>
+        </main>
 
-
-
-            <footer class="bg-light text-dark text-center p-3 rounded-top">
-                <p>Derechos de Autor Reservados</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <img src="../imagenes/facebook.jpg" width="40" alt="Facebook">
-                    <img src="../imagenes/instagram.jfif" width="40" alt="Instagram">
-                    <img src="../imagenes/linkedin.webp" width="40" alt="LinkedIn">
-                    <img src="../imagenes/youtube(4).jfif" width="40" alt="YouTube">
-                </div>
-            </footer>
-        </div>
+        <!-- Footer -->
+        <footer class="bg-light text-dark text-center p-3 rounded-top">
+            <p>Derechos de Autor Reservados</p>
+            <div class="d-flex justify-content-center gap-3">
+                <img src="../imagenes/facebook.png" width="40" alt="Facebook">
+                <img src="../imagenes/logotipo-de-instagram.png" width="40" alt="Instagram">
+                <img src="../imagenes/gorjeo.png" width="40" alt="LinkedIn">
+                <img src="../imagenes/youtube.png" width="40" alt="YouTube">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
