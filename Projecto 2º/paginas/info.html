@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +11,10 @@
     /* Sección con imagen de fondo */
     .fondo-gala {
       background-image: url('../imagenes/ESLAND_WALLPAPER_02.jpg');
-      /* Ruta de la imagen */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 80vh;
-      /* La imagen ocupará el 80% de la pantalla */
       position: relative;
       display: flex;
       align-items: center;
@@ -25,8 +22,6 @@
       text-align: center;
       color: white;
     }
-
-    /* Filtro oscuro para mejorar el contraste del texto */
     .fondo-gala::before {
       content: "";
       position: absolute;
@@ -35,29 +30,47 @@
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
-      /* Oscurece la imagen */
     }
-
-    /* Hace que el contenido esté por encima del filtro */
     .fondo-gala .contenido {
       position: relative;
       z-index: 1;
     }
-
     .cards img {
       width: 30px;
     }
-
-    /* Estilo para el mapa interactivo */
-    #map {
-      height: 500px;
-      /* Ajusta la altura del mapa */
-      border-radius: 10px;
-      /* Bordes redondeados */
+    /* Cambiamos el color del texto del carrusel para que sea visible */
+    .carousel-caption h3,
+    .carousel-caption h4 {
+      color:red;
+    }
+    /* Media Query Pequeño (375px) */
+    @media (max-width: 375px) {
+      body {
+        font-size: 14px;
+      }
+      .container {
+        padding: 0 10px;
+      }
+      header,
+      footer {
+        flex-direction: column;
+        align-items: center;
+      }
+      header nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .card {
+        margin: 0 10px;
+      }
+      .registro {
+        padding: 0 10px;
+        margin-left: 30px;
+      }
     }
   </style>
 </head>
-
 <body class="bg-dark text-white">
   <div class="container">
     <!-- Encabezado -->
@@ -93,103 +106,188 @@
         </div>
       </section>
 
-      <!-- Sección de tarjetas -->
-      <section>
-        <div class="container">
-          <h2 class="text-center mt-4">Ganadores de la Última Edición</h2>
-          <div class="row mt-4">
-            <div class="justify-content-center d-flex" id="cards">
-              <!-- Streamer del AÑo -->
-              <div class="col-md-4 ms-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/streamerdelano.jpg" alt="Ganador 1" class="card-img-small"
-                      width="200">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
+      <!-- Sección de tarjetas (Solo para pantallas medianas y grandes) -->
+      <div class="container md-">
+        <h2 class="text-center mt-4">Ganadores de la Última Edición</h2>
+        <!-- Sección de tarjetas de una a una-->
+        <div class="row mt-4 d-none d-md-flex">
+          <div class="justify-content-center d-flex" id="cards">
+            <!-- Streamer del AÑo -->
+            <div class="col-md-4 ms-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/streamerdelano.jpg" alt="Ganador 1" class="card-img-small"
+                    width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mejor Creador de Contenido</h3>
+                  <p class="card-text">
+                    El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Mejor Contenido del AÑo -->
+            <div class="col-md-4 ms-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/contenidoano.jpg" alt="Ganador 1" class="card-img-small"
+                    width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mejor Creador de Contenido</h3>
+                  <p class="card-text">
+                    El contenido es una serie de Minecraft en la que varios creadores de contenidos hispanos participan.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Mejor Evento del AÑo -->
+            <div class="col-md-4 ms-3 me-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/eventoano.jpg" alt="Ganador 1" class="card-img-small" width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mejor Evento del Año</h3>
+                  <p class="card-text">
+                    Es el evento que todo el mundo espara en el que los mejores creadores de contenido pelean en un ring de boxeo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="justify-content-center d-flex mt-3" id="cards">
+            <!-- Mejor Trayectoria -->
+            <div class="col-md-4 ms-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/mejortrayectoria.jpg" alt="Ganador 1" class="card-img-small"
+                    width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mejor Trayectoria</h3>
+                  <p class="card-text">
+                    Es un creador de contenido que es y fue un referente para todos los niños y adultos.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Streamer Revelación del AÑo -->
+            <div class="col-md-4 ms-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/streamer_revelacion.jpg" alt="Ganador 1" class="card-img-small"
+                    width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Streamer Revelación del Ano</h3>
+                  <p class="card-text">
+                    Este es el creador de contenido que surgio con popularidad en este año.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Mejor Podcast del AÑo -->
+            <div class="col-md-4 ms-3 me-3">
+              <div class="card text-center">
+                <div class="d-flex justify-content-center">
+                  <img src="../imagenes/ganadores/talkshowano.jpg" alt="Ganador 1" class="card-img-small" width="200">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Mejor Podcast del Año</h3>
+                  <p class="card-text">
+                    Es un canal de charla en la que tiene invitados interesantes de todos los campos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Sección de Carrusel (Solo para dispositivos móviles) -->
+        <div class="d-md-none mt-4">
+          <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- Slide 1: Card 1 -->
+              <div class="carousel-item active">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/streamerdelano.jpg" class="d-block" width="400" alt="StreamerdelAño">
+                  <div class="carousel-caption">
+                    <h3>Mejor Creador de Contenido</h3>
+                    <h4>El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.</h4>
                   </div>
                 </div>
               </div>
-              <!-- Mejor Contenido del AÑo -->
-              <div class="col-md-4 ms-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/contenidoano.jpg" alt="Ganador 1" class="card-img-small"
-                      width="200">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
+              <!-- Slide 2: Card 2 -->
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/contenidoano.jpg" class="d-block" width="400" alt="ContenidoAño">
+                  <div class="carousel-caption">
+                    <h3>Mejor Contenido del Año</h3>
+                    <h4>El contenido es una serie de Minecraft en la que varios creadores de contenidos hispanos participan.</h4>
                   </div>
                 </div>
               </div>
-              <!-- Mejor Evento del AÑo -->
-              <div class="col-md-4 ms-3 me-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/eventoano.jpg" alt="Ganador 1" class="card-img-small" width="200">
+              <!-- Slide 3: Card 3 -->
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/eventoano.jpg" class="d-block" width="400" alt="EventoAño">
+                  <div class="carousel-caption">
+                    <h3>Mejor Evento del Año</h3>
+                    <h4>Es el evento que todo el mundo espera en el que los mejores creadores de contenido pelean en un ring de boxeo.</h4>
                   </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
+                </div>
+              </div>
+              <!-- Slide 4: Card 4 -->
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/mejortrayectoria.jpg" class="d-block" width="400" alt="MejorTrayectoria">
+                  <div class="carousel-caption">
+                    <h3>Mejor Trayectoria</h3>
+                    <h4>Es un creador de contenido que es y fue un referente para todos los niños y adultos.</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5: Card 5 -->
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/streamer_revelacion.jpg" class="d-block" width="400" alt="StreamerRevelacion">
+                  <div class="carousel-caption">
+                    <h3>Streamer Revelación del Año</h3>
+                    <h4>Este es el creador de contenido que surgió con popularidad en este año.</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 6: Card 6 -->
+              <div class="carousel-item">
+                <div class="d-flex flex-column align-items-center">
+                  <img src="../imagenes/ganadores/talkshowano.jpg" class="d-block" width="400" alt="TalkshowAño">
+                  <div class="carousel-caption">
+                    <h3>Mejor Podcast del Año</h3>
+                    <h4>Es un canal de charla en la que tiene invitados interesantes de todos los campos.</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="justify-content-center d-flex mt-3" id="cards">
-              <!-- Mejor Trayectoria -->
-              <div class="col-md-4 ms-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/mejortrayectoria.jpg" alt="Ganador 1" class="card-img-small"
-                      width="200">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Streamer Revelación del AÑo -->
-              <div class="col-md-4 ms-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/streamer_revelacion.jpg" alt="Ganador 1" class="card-img-small"
-                      width="200">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Mejor Podcast del AÑo -->
-              <div class="col-md-4 ms-3 me-3">
-                <div class="card text-center">
-                  <div class="d-flex justify-content-center">
-                    <img src="../imagenes/ganadores/talkshowano.jpg" alt="Ganador 1" class="card-img-small" width="200">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Mejor Creador de Contenido</h3>
-                    <p class="card-text">
-                      El premio al mejor creador fue para Ibai Llanos por su gran contenido en Twitch y YouTube.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+            <!-- JavaScript de Bootstrap (incluye Popper) --> <!-- Hace que el carrusel funcione y todo lo relacionado con boostrap hay que ponerlo antes de cerrar el body-->
           </div>
         </div>
       </section>
@@ -198,15 +296,15 @@
       <section class="container my-5">
         <h2 class="text-center">Ubicación del Evento</h2>
         <div class="row justify-content-center">
-            <div class="col-md-10 d-flex justify-content-center">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.1430102063296!2d2.1727378760596565!3d41.38757517129995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2fa77ab0441%3A0x7faa64b56a736c43!2sPalau%20de%20la%20M%C3%BAsica%20Catalana!5e1!3m2!1ses!2ses!4v1741292094870!5m2!1ses!2ses" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+          <div class="col-md-10 d-flex justify-content-center">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.1430102063296!2d2.1727378760596565!3d41.38757517129995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2fa77ab0441%3A0x7faa64b56a736c43!2sPalau%20de%20la%20M%C3%BAsica%20Catalana!5e1!3m2!1ses!2ses!4v1741292094870!5m2!1ses!2ses" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
-    </section>
+      </section>
     
     </main>
 
@@ -223,6 +321,8 @@
     </footer>
 
   </div>
-</body>
 
+  <!-- JavaScript de Bootstrap (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
